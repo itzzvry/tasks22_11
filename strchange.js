@@ -35,16 +35,14 @@ function decompressString(s) {
         else {
             let numStr = str[i];
             
-            // Собираем все следующие цифры (для чисел больше 9)
+          
             while (i + 1 < str.length && !isNaN(parseInt(str[i + 1]))) {
                 numStr += s[i + 1];
                 i++;
             }
             
             const count = parseInt(numStr);
-            
-            // Добавляем предыдущий символ (count - 1) раз, 
-            // так как один символ уже был добавлен
+             
             result += currentChar.repeat(count - 1);
         }
     }
@@ -114,4 +112,5 @@ function findsecondabsmax(arr) {
         return second
     }
 }
+
 
